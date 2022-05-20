@@ -24,6 +24,7 @@ public class InputManager : MonoBehaviour
 
     private void Awake() 
     {
+        Cursor.visible = false;
         playerInput = new Inputs(); 
         onFoot = playerInput.OnFoot; 
 
@@ -32,7 +33,8 @@ public class InputManager : MonoBehaviour
 
         onFoot.Jump.performed += ctx => motor.Jump();
         onFoot.Courch.performed += ctx => motor.Courch();
-        onFoot.Sprint.performed += ctx => motor.Sprint();  
+        onFoot.Sprint.performed += ctx => motor.Sprint();
+        //onFoot.Shoot.performed += ctx => motor.Shoot();  
     }
 
     // Update is called once per frame

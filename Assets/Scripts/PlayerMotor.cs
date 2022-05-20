@@ -6,6 +6,8 @@ public class PlayerMotor : MonoBehaviour
 {
     [SerializeField]
     GameObject mainCam;
+    [SerializeField] 
+    Gun gun;
 
     private CharacterController controller;
     private InputManager inputManager;
