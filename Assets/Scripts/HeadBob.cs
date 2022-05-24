@@ -25,11 +25,4 @@ public class HeadBob : MonoBehaviour
         playerInput = new Inputs(); 
         onFoot = playerInput.OnFoot; 
     }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        //Debug.Log(controller.isGrounded);
-        
-    }
 }

@@ -48,7 +48,7 @@ public class PlayerMotor : MonoBehaviour
                 lerpCrouch = false;
                 crouchTimer = 0f;
             }
-        }   
+        }
     }
 
     public void Courch()

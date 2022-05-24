@@ -24,7 +24,12 @@ public class InputManager : MonoBehaviour
 
     private void Awake() 
     {
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        var mousePos = Input. mousePosition;
+        mousePos. x -= Screen. width/2;
+        mousePos. y -= Screen. height/2;
+
         playerInput = new Inputs(); 
         onFoot = playerInput.OnFoot; 
 
@@ -53,7 +58,7 @@ public class InputManager : MonoBehaviour
         {
             //Idle
             timer = 0;
-            transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(transform.localPosition.y, defaultPosY, Time.deltaTime * walkingBobbingSpeed), transform.localPosition.z);
+            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, Mathf.Lerp(cam.transform.localPosition.y, defaultPosY, Time.deltaTime * walkingBobbingSpeed), cam.transform.localPosition.z);
         }    
     }
 
